@@ -59,15 +59,15 @@ class Matrix {
 }
 
 //You can paste the code from the lesson below to test your solution
-let m = new Matrix(3, 4)
-m.print()
-m.alter(0, 0, m.get(1, 1))
-m.print()
-m.printColumn(0) //prints 6, 5, 9 (separate lines)
-m.printRow(0) //prints 6, 2, 3, 4 (separate lines)
+// let m = new Matrix(3, 4)
+// m.print()
+// m.alter(0, 0, m.get(1, 1))
+// m.print()
+// m.printColumn(0) //prints 6, 5, 9 (separate lines)
+// m.printRow(0) //prints 6, 2, 3, 4 (separate lines)
 
-console.log(m.findCoordinate(12)) //prints {x: 3, y: 2}
-console.log(m.findCoordinate(7)) //prints {x: 2, y: 1}
+// console.log(m.findCoordinate(12)) //prints {x: 3, y: 2}
+// console.log(m.findCoordinate(7)) //prints {x: 2, y: 1}
 
 /* Do not remove the exports below */
-//module.exports = Matrix
+module.exports = Matrix
