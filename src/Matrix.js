@@ -43,6 +43,19 @@ class Matrix {
     get = function(row, column){
         return this.matrix[row][column]
     }
+
+    findCoordinate = function(value){
+        let numColumns = this.matrix[0].length
+        let numRows = this.matrix.length
+
+        for(let i=0; i<numRows; i++){
+            for(let j=0; j<numColumns; j++){
+                if(this.matrix[i][j] === value){
+                    return {x: j, y: i}
+                }
+            }
+        }
+    }
 }
 
 //You can paste the code from the lesson below to test your solution
@@ -53,5 +66,8 @@ m.print()
 m.printColumn(0) //prints 6, 5, 9 (separate lines)
 m.printRow(0) //prints 6, 2, 3, 4 (separate lines)
 
+console.log(m.findCoordinate(12)) //prints {x: 3, y: 2}
+console.log(m.findCoordinate(7)) //prints {x: 2, y: 1}
+
 /* Do not remove the exports below */
-module.exports = Matrix
+//module.exports = Matrix
