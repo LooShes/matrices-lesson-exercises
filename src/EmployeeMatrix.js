@@ -2,21 +2,31 @@ const Matrix = require('./Matrix')
 
 /* Write your code below */
 class EmployeeMatrix {
-    constructor(){
+    constructor() {
         this.empMatrix = new Matrix(6, 4)
     }
 
-    loadData = function(salaryData){
+    loadData = function (salaryData) {
         let i = 0
         salaryData.forEach(element => {
             element = Object.values(element)
             this.empMatrix.alterRow(i, element)
             i++
-                })
+        })
     }
 
-    print = function(){
+    print = function () {
         console.log(this.empMatrix.matrix)
+    }
+
+    getEmployees = function (department) {
+        let employees = []
+        for(let i=0; i<this.empMatrix.matrix.length; i++){
+            if(this.empMatrix.matrix[i][2] === department){
+                employees.push(this.empMatrix.matrix[i][1])
+            }
+        }
+        return employees
     }
 }
 
@@ -34,6 +44,8 @@ let m = new EmployeeMatrix()
 
 m.loadData(data)
 m.print()
+console.log(m.getEmployees("Finance")) //prints [ 'Gillian', 'Anisha' ]
+console.log(m.getEmployees("Design")) //prints [ 'Tibor', 'Jakub', 'Mar', 'Nisha' ]
 
 //prints
 // e10021  Gillian Finance 2000
