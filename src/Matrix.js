@@ -40,6 +40,12 @@ class Matrix {
         this.matrix[row][column] = value
     }
 
+    alterRow = function(rowToEdit, row){
+        for(let i=0; i<this.matrix[rowToEdit].length; i++){
+            this.matrix[rowToEdit][i] = row[i]
+        }
+    }
+
     get = function(row, column){
         return this.matrix[row][column]
     }

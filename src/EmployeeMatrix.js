@@ -1,4 +1,4 @@
-const Matrix = requare('./Matrix')
+//const Matrix = require('./Matrix')
 
 /* Write your code below */
 class EmployeeMatrix {
@@ -7,11 +7,16 @@ class EmployeeMatrix {
     }
 
     loadData = function(salaryData){
-        
-        //this.empMatrix = salaryData.map(elem => elem = Object.values(salaryData[0]))
-        this.empMatrix.forEach(element => {
-            element = Object.values(salaryData[element])
-        })
+        let i = 0
+        salaryData.forEach(element => {
+            element = Object.values(element)
+            this.empMatrix.alterRow(i, element)
+            i++
+                })
+    }
+
+    print = function(){
+        console.log(this.empMatrix.matrix)
     }
 }
 
