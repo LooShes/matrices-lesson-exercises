@@ -1,4 +1,4 @@
-//const Matrix = require('./Matrix')
+const Matrix = require('./Matrix')
 
 /* Write your code below */
 class EmployeeMatrix {
